@@ -1,0 +1,17 @@
+{
+  "name": "tiny-html-entity",
+  "version": "0.1.0",
+  "description": "Converts HTML5 character references to text and text to safe HTML entities.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
