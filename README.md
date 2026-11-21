@@ -19,3 +19,10 @@ Most HTML entity libraries either pull in a large data package or only handle a 
 ## The awkward edge
 
 Named references without a trailing semicolon are not decoded. The HTML5 spec permits some legacy references without a semicolon, but that behaviour is context-sensitive and surprising. We require the semicolon for predictability: `&amp` stays as `&amp`, while `&amp;` becomes `&`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
